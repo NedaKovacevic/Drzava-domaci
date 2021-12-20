@@ -58,6 +58,7 @@
             this.topButton.TabIndex = 0;
             this.topButton.Text = "<<";
             this.topButton.UseVisualStyleBackColor = true;
+            this.topButton.Click += new System.EventHandler(this.topButton_Click);
             // 
             // leftButton
             // 
@@ -87,6 +88,7 @@
             this.bottomButton.TabIndex = 3;
             this.bottomButton.Text = ">>";
             this.bottomButton.UseVisualStyleBackColor = true;
+            this.bottomButton.Click += new System.EventHandler(this.bottomButton_Click);
             // 
             // insertB
             // 
@@ -96,6 +98,7 @@
             this.insertB.TabIndex = 4;
             this.insertB.Text = "insert";
             this.insertB.UseVisualStyleBackColor = true;
+            this.insertB.Click += new System.EventHandler(this.insertB_Click);
             // 
             // updateB
             // 

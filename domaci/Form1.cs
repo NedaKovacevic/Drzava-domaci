@@ -113,6 +113,38 @@ namespace domaci
             }
         }
 
+        private void bottomButton_Click(object sender, EventArgs e)
+        {
+            gde = podaci.Rows.Count - 1;
+            refreshuj();
+        }
+
+        private void topButton_Click(object sender, EventArgs e)
+        {
+            gde = 0;
+            refreshuj();
+        }
+
+        private void insertB_Click(object sender, EventArgs e)
+        {
+            veza = new SqlConnection(cs);
+            naz = tbNaziv.Text;
+            kont = tbKont.Text;
+            glgrad = tbGlgrad.Text;
+            pov = tbP.Text;
+            brst = tbBrS.Text;
+
+            veza.Open();
+            SqlCommand naredba = new SqlCommand($"insert into drzava values('{naz}','{kont}','{glgrad}','{pov}','{brst}')", veza);
+            naredba.ExecuteNonQuery();
+            veza.Close();
+            podaci.Clear();
+            adapter = new SqlDataAdapter("select * from drzava", veza);
+            adapter.Fill(podaci);
+            gde = podaci.Rows.Count - 1;
+            refreshuj();
+        }
+
         SqlDataAdapter adapter;
 
         public Form1()
@@ -123,7 +155,7 @@ namespace domaci
         private void Form1_Load(object sender, EventArgs e)
         {
             veza = new SqlConnection(cs);
-            adapter = new SqlDataAdapter("select * from firma", veza);
+            adapter = new SqlDataAdapter("select * from drzava", veza);
             adapter.Fill(podaci);
             tbid.Enabled = false;
             refreshuj();
