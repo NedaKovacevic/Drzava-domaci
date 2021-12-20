@@ -1,0 +1,10 @@
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\bin\Debug\domaci.exe.config
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\bin\Debug\domaci.exe
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\bin\Debug\domaci.pdb
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\obj\Debug\domaci.csprojAssemblyReference.cache
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\obj\Debug\domaci.Form1.resources
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\obj\Debug\domaci.Properties.Resources.resources
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\obj\Debug\domaci.csproj.GenerateResource.cache
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\obj\Debug\domaci.csproj.CoreCompileInputs.cache
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\obj\Debug\domaci.exe
+C:\Users\tamar\Desktop\Neda Vanredno\repos1000\domaci\obj\Debug\domaci.pdb
