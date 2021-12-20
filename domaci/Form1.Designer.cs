@@ -32,9 +32,9 @@
             this.leftButton = new System.Windows.Forms.Button();
             this.rightButton = new System.Windows.Forms.Button();
             this.bottomButton = new System.Windows.Forms.Button();
-            this.insert = new System.Windows.Forms.Button();
-            this.update = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
+            this.insertB = new System.Windows.Forms.Button();
+            this.updateB = new System.Windows.Forms.Button();
+            this.deleteB = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.Label();
             this.naziv = new System.Windows.Forms.Label();
             this.kontinent = new System.Windows.Forms.Label();
@@ -46,7 +46,8 @@
             this.tbGlgrad = new System.Windows.Forms.TextBox();
             this.tbKont = new System.Windows.Forms.TextBox();
             this.tbNaziv = new System.Windows.Forms.TextBox();
-            this.tbId = new System.Windows.Forms.TextBox();
+            this.tbid = new System.Windows.Forms.TextBox();
+            this.clearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // topButton
@@ -66,6 +67,7 @@
             this.leftButton.TabIndex = 1;
             this.leftButton.Text = "<";
             this.leftButton.UseVisualStyleBackColor = true;
+            this.leftButton.Click += new System.EventHandler(this.leftButton_Click);
             // 
             // rightButton
             // 
@@ -75,6 +77,7 @@
             this.rightButton.TabIndex = 2;
             this.rightButton.Text = ">";
             this.rightButton.UseVisualStyleBackColor = true;
+            this.rightButton.Click += new System.EventHandler(this.rightButton_Click);
             // 
             // bottomButton
             // 
@@ -85,32 +88,34 @@
             this.bottomButton.Text = ">>";
             this.bottomButton.UseVisualStyleBackColor = true;
             // 
-            // insert
+            // insertB
             // 
-            this.insert.Location = new System.Drawing.Point(807, 128);
-            this.insert.Name = "insert";
-            this.insert.Size = new System.Drawing.Size(151, 52);
-            this.insert.TabIndex = 4;
-            this.insert.Text = "insert";
-            this.insert.UseVisualStyleBackColor = true;
+            this.insertB.Location = new System.Drawing.Point(807, 128);
+            this.insertB.Name = "insertB";
+            this.insertB.Size = new System.Drawing.Size(151, 52);
+            this.insertB.TabIndex = 4;
+            this.insertB.Text = "insert";
+            this.insertB.UseVisualStyleBackColor = true;
             // 
-            // update
+            // updateB
             // 
-            this.update.Location = new System.Drawing.Point(807, 260);
-            this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(151, 52);
-            this.update.TabIndex = 5;
-            this.update.Text = "update";
-            this.update.UseVisualStyleBackColor = true;
+            this.updateB.Location = new System.Drawing.Point(807, 260);
+            this.updateB.Name = "updateB";
+            this.updateB.Size = new System.Drawing.Size(151, 52);
+            this.updateB.TabIndex = 5;
+            this.updateB.Text = "update";
+            this.updateB.UseVisualStyleBackColor = true;
+            this.updateB.Click += new System.EventHandler(this.updateB_Click);
             // 
-            // delete
+            // deleteB
             // 
-            this.delete.Location = new System.Drawing.Point(807, 401);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(151, 52);
-            this.delete.TabIndex = 6;
-            this.delete.Text = "delete";
-            this.delete.UseVisualStyleBackColor = true;
+            this.deleteB.Location = new System.Drawing.Point(807, 401);
+            this.deleteB.Name = "deleteB";
+            this.deleteB.Size = new System.Drawing.Size(151, 52);
+            this.deleteB.TabIndex = 6;
+            this.deleteB.Text = "delete";
+            this.deleteB.UseVisualStyleBackColor = true;
+            this.deleteB.Click += new System.EventHandler(this.deleteB_Click);
             // 
             // id
             // 
@@ -202,19 +207,30 @@
             this.tbNaziv.Size = new System.Drawing.Size(211, 38);
             this.tbNaziv.TabIndex = 17;
             // 
-            // tbId
+            // tbid
             // 
-            this.tbId.Location = new System.Drawing.Point(441, 76);
-            this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(211, 38);
-            this.tbId.TabIndex = 18;
+            this.tbid.Location = new System.Drawing.Point(441, 76);
+            this.tbid.Name = "tbid";
+            this.tbid.Size = new System.Drawing.Size(211, 38);
+            this.tbid.TabIndex = 18;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(441, 533);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(210, 44);
+            this.clearButton.TabIndex = 19;
+            this.clearButton.Text = "clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 769);
-            this.Controls.Add(this.tbId);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.tbid);
             this.Controls.Add(this.tbNaziv);
             this.Controls.Add(this.tbKont);
             this.Controls.Add(this.tbGlgrad);
@@ -226,9 +242,9 @@
             this.Controls.Add(this.kontinent);
             this.Controls.Add(this.naziv);
             this.Controls.Add(this.id);
-            this.Controls.Add(this.delete);
-            this.Controls.Add(this.update);
-            this.Controls.Add(this.insert);
+            this.Controls.Add(this.deleteB);
+            this.Controls.Add(this.updateB);
+            this.Controls.Add(this.insertB);
             this.Controls.Add(this.bottomButton);
             this.Controls.Add(this.rightButton);
             this.Controls.Add(this.leftButton);
@@ -247,9 +263,9 @@
         private System.Windows.Forms.Button leftButton;
         private System.Windows.Forms.Button rightButton;
         private System.Windows.Forms.Button bottomButton;
-        private System.Windows.Forms.Button insert;
-        private System.Windows.Forms.Button update;
-        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button insertB;
+        private System.Windows.Forms.Button updateB;
+        private System.Windows.Forms.Button deleteB;
         private System.Windows.Forms.Label id;
         private System.Windows.Forms.Label naziv;
         private System.Windows.Forms.Label kontinent;
@@ -261,7 +277,8 @@
         private System.Windows.Forms.TextBox tbGlgrad;
         private System.Windows.Forms.TextBox tbKont;
         private System.Windows.Forms.TextBox tbNaziv;
-        private System.Windows.Forms.TextBox tbId;
+        private System.Windows.Forms.TextBox tbid;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
