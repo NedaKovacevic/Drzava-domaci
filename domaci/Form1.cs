@@ -22,5 +22,10 @@ namespace domaci
             //proradi vise brate
             //lalallala
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
