@@ -20,6 +20,7 @@ namespace domaci
         private void Form1_Load(object sender, EventArgs e)
         {
             //proradi vise brate
+            //lalallala
         }
     }
 }
